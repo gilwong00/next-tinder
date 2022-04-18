@@ -44,6 +44,31 @@
     ora "5.4.1"
     rxjs "6.6.7"
 
+"@apollo/core-schema@~0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@apollo/core-schema/-/core-schema-0.3.0.tgz#c6c1a6821fb326501d73eb85d920bbf57906cc77"
+  integrity sha512-v+Ys6+W1pDQu+XwP++tI5y4oZdzKrEuVXwsEenOmg2FO/3/G08C+qMhQ9YQ9Ug34rvQGQtgbIDssHEVk4YZS7g==
+  dependencies:
+    "@protoplasm/recall" "^0.2"
+
+"@apollo/federation-internals@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@apollo/federation-internals/-/federation-internals-2.0.1.tgz#582bbc732015ec63117da958e79ded7495fbbf79"
+  integrity sha512-as2lL0tChwQx3PgBKQ8hELal2paBFsbucXSba+Gi84ZP1wGtYtl5kJmE7DVImsC+/CAVjEFWM7aWQGJg6Im8Ow==
+  dependencies:
+    "@apollo/core-schema" "~0.3.0"
+    chalk "^4.1.0"
+    js-levenshtein "^1.1.6"
+
+"@apollo/federation@^0.36.1":
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/@apollo/federation/-/federation-0.36.1.tgz#25afa0598c701763928de13f6fbbe49dfabdb24e"
+  integrity sha512-SAvW7ZRUEtmAdK+UWRXZxo/wRNVbDDyYbeYJooKAtvc8B4Mly+2PusqBQ+4RuHhg5dSqrv5d6RXJeY9MBiraVA==
+  dependencies:
+    "@apollo/subgraph" "^0.4.1"
+    apollo-server-types "^3.0.2"
+    lodash.xorby "^4.7.0"
+
 "@apollo/protobufjs@1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@apollo/protobufjs/-/protobufjs-1.2.2.tgz#4bd92cd7701ccaef6d517cdb75af2755f049f87c"
@@ -62,6 +87,18 @@
     "@types/long" "^4.0.0"
     "@types/node" "^10.1.0"
     long "^4.0.0"
+
+"@apollo/subgraph@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@apollo/subgraph/-/subgraph-0.4.1.tgz#7bc4f0a133a8558607b99f83138cbb313fe39b42"
+  integrity sha512-4tm9sY/aYGwB20xccVRJiLupEpEhXBbhbJNlpqigtXnE6A5uQvvKn7qgDdZn5fZr6rw4kX5N9lLSliU03QwTfA==
+
+"@apollo/subgraph@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@apollo/subgraph/-/subgraph-2.0.1.tgz#ae638802c9841fc3189b9e8545a93bfab0378c90"
+  integrity sha512-GHfJ+W7A2yiES+7nKlPFcjDuXFbj/hgGADVcNo+3HUSHOR8l+7gUhn/7pED0bhUPO5Dr2yEgz7aA39MiQ6PHTQ==
+  dependencies:
+    "@apollo/federation-internals" "^2.0.1"
 
 "@apollographql/apollo-tools@^0.5.3":
   version "0.5.3"
@@ -875,6 +912,11 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
+"@protoplasm/recall@^0.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@protoplasm/recall/-/recall-0.2.2.tgz#4d8b259efba89938220088d444011b961ae3775a"
+  integrity sha512-grQIYNd3UsFjHXL1g5Qw5MdUNAddEcD1KfqiO6WeMOQHgIgECXo7r4jfcXGIh37q17HoGQgq/G4guMGkzQ+UOA==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.3.tgz#3802ddd21a50a949b6721ddd72da36e67e7f1b2d"
@@ -1587,7 +1629,7 @@ apollo-server-plugin-base@^3.5.2:
   dependencies:
     apollo-server-types "^3.5.2"
 
-apollo-server-types@^3.5.2:
+apollo-server-types@^3.0.2, apollo-server-types@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/apollo-server-types/-/apollo-server-types-3.5.2.tgz#903d499a70b9010764cbab4d704ddb8c086aa06f"
   integrity sha512-vhcbIWsBkoNibABOym4AAPBoNDjokhjUQokKYdwZMeqrb850PMQdNJFrGyXT5onP408Ghv4O8PfgBuPQmeJhVQ==
@@ -3648,6 +3690,11 @@ jest@^27.2.5:
     import-local "^3.0.2"
     jest-cli "^27.5.1"
 
+js-levenshtein@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
+  integrity sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -3819,6 +3866,11 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
+
+lodash.xorby@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/lodash.xorby/-/lodash.xorby-4.7.0.tgz#9c19a6f9f063a6eb53dd03c1b6871799801463d7"
+  integrity sha1-nBmm+fBjputT3QPBtocXmYAUY9c=
 
 lodash@4.17.21, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"

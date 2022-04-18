@@ -3,7 +3,7 @@ version: '3'
 services:
   postgres:
     image: postgres:12.5-alpine
-    container_name: next_tinder_pg
+    container_name: next_tinder_users
     env_file:
       - ./config/docker.env
     environment:

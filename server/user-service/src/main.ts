@@ -10,7 +10,7 @@ async function bootstrap() {
 
   const prismaService = app.get(PrismaService);
   await prismaService.enableShutdownHooks(app);
-  await app.listen(5000);
+  await app.listen(process.env.PORT || 5000);
 
   console.log(`Application is running on: ${await app.getUrl()}`);
 }

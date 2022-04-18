@@ -3,11 +3,12 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver } from '@nestjs/apollo';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { PrismaService } from './prisma/prisma.service';
 import { UserModule } from './user/user.module';
 import { join } from 'path';
 import { GraphQLError } from 'graphql';
+import { UserResolver } from './user/user.resolver';
+import { UserService } from './user/user.service';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { GraphQLError } from 'graphql';
       debug: process.env.NODE_ENV !== 'production',
       playground: true,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      installSubscriptionHandlers: true,
+      installSubscriptionHandlers: false,
       disableHealthCheck: false,
       formatError: (error: GraphQLError) => {
         return error;
@@ -35,6 +36,6 @@ import { GraphQLError } from 'graphql';
     UserModule,
   ],
   controllers: [AppController],
-  providers: [AppService, PrismaService],
+  providers: [UserResolver, UserService, PrismaService],
 })
 export class AppModule {}

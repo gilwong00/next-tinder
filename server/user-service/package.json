@@ -1,5 +1,5 @@
 {
-	"name": "next-tinder",
+	"name": "user-service",
 	"version": "0.0.1",
 	"description": "",
 	"author": "",
@@ -23,6 +23,8 @@
 		"docker:destroy": "sh docker/scripts/destroy.sh"
 	},
 	"dependencies": {
+		"@apollo/federation": "^0.36.1",
+		"@apollo/subgraph": "^2.0.1",
 		"@nestjs/apollo": "^10.0.8",
 		"@nestjs/common": "^8.0.0",
 		"@nestjs/core": "^8.0.0",
