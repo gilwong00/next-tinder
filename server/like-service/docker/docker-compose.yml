@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12.5-alpine
+    container_name: next_tinder_matches
+    env_file:
+      - ./config/docker.env
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+
+
